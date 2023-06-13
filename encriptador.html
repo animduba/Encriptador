@@ -9,23 +9,39 @@
         <title>Encriptador</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     </head>
 
-    <body class="principal">
-        
-        <main>
+    <body>
+        <section class="pantalla">  
+            
             <div class="logo">
                 <h1><img src="imagenes/Logo.png"></h1>
             </div>
 
-            <section>
+            <div class="texto">
+                <textarea class="textoEncriptar" name="mensaje" id="mensaje" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
 
-            </section>
+            <div class="caja">
+                <h1 class="munheco"><img src="imagenes/munheco.png"></h1>
+                <h2>Ningún mensaje fue encontrado</h2>
+                <h3>Ingresa el texto que desees encriptar o desencriptar.</h3>
+            </div>
 
-        </main>
-
+        </section>
+            
     </body>
 
-
 </html>
+
+<!--
+        <section class="botones">
+            <input type="submit" name="botonEncriptar" value="Encriptar" class="botonEncriptar">
+
+            <input type="submit" name="botonDesencriptar" value="Desencriptar" class="botonDesencriptar">
+        </section>
+        -->
