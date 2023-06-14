@@ -1,7 +1,6 @@
 .pantalla {
     background: #E5E5E5;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
@@ -12,7 +11,7 @@
 
 .logo {
     position: absolute;
-    height: 10vh;
+    height: 5vh;
     width: 10vw;
     top: 2vh;
     left: 2vh;
@@ -56,12 +55,50 @@
     outline: red dashed 1px;
 }
 
+.botones {
+    margin: 15px 1px 15px 1px; /*top right bottom left */
+}
+
+.botonEncriptar {
+    height: 60px;
+    width: 220px;
+
+    padding: 15px;
+    margin: 0px 6px 0px 6px; /*top right bottom left */
+
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
+
+.botonDesencriptar {
+    height: 60px;
+    width: 220px;
+
+    padding: 15px;
+    margin: 0px 6px 0px 6px; /*top right bottom left */
+    
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
+
+.textoEncriptado {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    outline: red dashed 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .caja {
     background: #FFFFFF;
-    margin-left: auto;
     height: 90vh;
-    width: 30vw;
-    margin-right: 5vh;    
+    width: 35vw;  
+    margin: 0;
 
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
@@ -76,19 +113,45 @@
     flex-direction: column;
 }
 
+.munheco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    outline: red dashed 1px;
+}
+
+.munheco img {
+    width: 100%;
+    height: auto;
+
+    outline: red dashed 1px;
+}
+
+
+.caja h2 {
+    color: #343A40;
+    font-weight: bold;
+    font-size: 130%;
+    margin: 5px 10% 0 10%; /*top right bottom left */
+}
+
+.caja h3 {
+    color: #495057;
+    font-size: 75%;
+    margin: 3% 10% 0 10%; /*top right bottom left */
+}
+
 /* Media query para ajustar el tamaño del cuadro en diferentes tamaños de pantalla */
 @media screen and (max-width: 1100px) {
     .pantalla {
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
     }
     
     .texto {
-        margin-left: auto;
         height: 40vh;
         width: 100vw;
-        margin: 15% 0% 0% 0%; /*top right bottom left */
+        margin: 60px 0% 0% 0%; /*top right bottom left */
 
         text-align: center;
 
@@ -107,49 +170,44 @@
     }
 
     .caja {
-        margin-left: auto;
-        height: 40vh;
-        width: 90vw;  
+        height: 90%;
+        width: 90%;  
         margin: 0% 1% 0 1%; /*top right bottom left */
-
-        text-align: center;
-
-        outline: red dashed 1px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
     }
-
+    
     .caja h3 {
         color: #495057;
         font-size: 75%;
-        margin: 3% 10% 0 10%; /*top right bottom left */
+        margin: 1% 10% 0 10%; /*top right bottom left */
     }
 }
 
-.munheco {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* Media query para ajustar el tamaño del cuadro en diferentes tamaños de pantalla */
+@media screen and (max-width: 550px) {
+    .logo img {
+        width: 52px;
+        height: auto;
+    }
 
-.munheco img {
-    max-width: 95%;
-    max-height: 95%;
-}
+    .botonEncriptar {
+        max-height: 50px;
 
+        max-width: 40vw;
+        min-width: 130px;
+    }
 
-.caja h2 {
-    color: #343A40;
-    font-weight: bold;
-    font-size: 130%;
-    margin: 0% 10% 0 10%; /*top right bottom left */
-}
+    .botonDesencriptar {
+        max-height: 50px;
 
-.caja h3 {
-    color: #495057;
-    font-size: 75%;
-    margin: 3% 10% 0 10%; /*top right bottom left */
+        max-width: 40vw;
+        min-width: 130px;
+    }
+
+    .munheco img {
+        width: 75%;
+        height: auto;
+    
+        outline: red dashed 1px;
+    }
+
 }
