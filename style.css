@@ -2,7 +2,7 @@
     background: #E5E5E5;
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: 96vh;
     width: 100vw;
 
     font-family: 'Roboto', sans-serif;
@@ -10,26 +10,31 @@
   
 
 .logo {
-    position: absolute;
-    height: 5vh;
-    width: 10vw;
-    top: 2vh;
-    left: 2vh;
+    height: 10%;
+    width: 100%;
 
-    outline: red dashed 1px;
-    
+    display: flex;
+    align-items: center;
+
+    outline: red dashed 1px;   
 }
 
 .logo img {
-    width: 100%;
-    height: auto;
+    height: 60%;
+    width: auto;
+    float: left;
+}
+
+.cuadroTexto {
+    height: 83%;
+    width: 100%;  
+    outline: red dashed 1px;  
 }
 
 .texto {
     margin-left: auto;
-    height: 75vh;
-    width: 58vw;
-    margin-right: 5vh;    
+    height: 100%;
+    width: 75%;  
 
     text-align: center;
 
@@ -48,44 +53,76 @@
     resize: none;
     
     color: black;
-    font-size: 3.2vh;
-    height: 70vh;
-    width: 55vw;
+    font-size: 150%;
+    height: 90%;
+    width: 85%;
+
+    margin: 1% 0 0 0; /*top right bottom left */
 
     outline: red dashed 1px;
 }
 
+.instruccion {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    height: 5%;
+    width: 85%;
+
+    margin: 1% 0 0 0; /*top right bottom left */
+
+    outline: red dashed 1px;
+}
+
+.instruccion h4 {
+    font-size: 70%;
+}
+
+h4 img{
+    margin: 0px 5px 0px 5px; /*top right bottom left */
+}
+
 .botones {
-    margin: 15px 1px 15px 1px; /*top right bottom left */
+    height: 8%;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .botonEncriptar {
-    height: 60px;
-    width: 220px;
+    height: 80%;
+    width: 30%;
 
-    padding: 15px;
-    margin: 0px 6px 0px 6px; /*top right bottom left */
+    margin: 1%; /*top right bottom left */
 
     background: #0A3871;
     border: 1px solid #0A3871;
     border-radius: 24px;
+
+    font-size: 85%;
+    color: white;
 }
 
 .botonDesencriptar {
-    height: 60px;
-    width: 220px;
+    height: 80%;
+    width: 30%;
 
-    padding: 15px;
-    margin: 0px 6px 0px 6px; /*top right bottom left */
+    margin: 1%; /*top right bottom left */
     
     background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 24px;
+
+    font-size: 85%;
+    color: #0A3871;
 }
 
 .textoEncriptado {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 50%;
     text-align: center;
     outline: red dashed 1px;
     display: flex;
@@ -96,9 +133,8 @@
 
 .caja {
     background: #FFFFFF;
-    height: 90vh;
-    width: 35vw;  
-    margin: 0;
+    height: 90%;
+    width: 80%;
 
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
@@ -118,11 +154,14 @@
     justify-content: center;
     align-items: center;
 
+    height: 45%;
+    width: 90%;
+
     outline: red dashed 1px;
 }
 
 .munheco img {
-    width: 100%;
+    width: 85%;
     height: auto;
 
     outline: red dashed 1px;
@@ -142,39 +181,95 @@
     margin: 3% 10% 0 10%; /*top right bottom left */
 }
 
+footer {
+    height: 4vh;
+    width: 100vw;
+    background: #E5E5E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer h2 {
+    color: #65747D;
+    font-size: 80%;
+    margin: 0 4px 0 4px; /*top right bottom left */
+}
+
 /* Media query para ajustar el tamaño del cuadro en diferentes tamaños de pantalla */
 @media screen and (max-width: 1100px) {
     .pantalla {
+        height: 96vh;
+        width: 100vw;
+
         flex-direction: column;
     }
     
     .texto {
-        height: 40vh;
-        width: 100vw;
-        margin: 60px 0% 0% 0%; /*top right bottom left */
-
-        text-align: center;
-
-        outline: red dashed 1px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        height: 55%;
+        width: 100%;
         
     }
 
+    .logo {
+        height: 10%;
+    }
+
+    .logo img {
+        width: 60%;
+        height: auto;
+    }
+
+    .cuadroTexto {
+        height: 80%;
+    }
+
     .textoEncriptar {
-        height: 35vh;
-        width: 90vw;
+        height: 82%;
+        width: 90%;
+        margin: 1% 0 1% 0;
+    }
+
+    .instruccion {
+        height: 8%;
+        width: 90%;
+        margin: 0;
+    }
+
+    .botones {
+        height: 10%;
+    }
+
+    .botonEncriptar {
+        margin: 0 0.5% 0 0; /*top right bottom left */
+    }
+
+    .botonDesencriptar {
+        margin: 0 0 0 0.5%; /*top right bottom left */
+    }
+
+    .textoEncriptado {
+        height: 45%;
+        width: 100%;
     }
 
     .caja {
         height: 90%;
-        width: 90%;  
-        margin: 0% 1% 0 1%; /*top right bottom left */
+        width: 90%;
+        border-radius: 20px;
     }
     
+    .munheco {
+        height: 65%;
+        width: 80%;
+    }
+
+    .munheco img {
+        height: 95%;
+        width: auto;
+    }
+
     .caja h3 {
         color: #495057;
         font-size: 75%;
@@ -187,6 +282,10 @@
     .logo img {
         width: 52px;
         height: auto;
+    }
+
+    .botones {
+        margin: 10px 1px 10px 1px; /*top right bottom left */
     }
 
     .botonEncriptar {
@@ -203,11 +302,8 @@
         min-width: 130px;
     }
 
-    .munheco img {
-        width: 75%;
-        height: auto;
-    
-        outline: red dashed 1px;
+    footer h2 {
+        font-size: 75%;
     }
 
 }

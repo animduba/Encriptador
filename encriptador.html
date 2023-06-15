@@ -18,16 +18,23 @@
     <body>
         <section class="pantalla">  
             
-            <div class="logo">
-                <h1><img src="imagenes/Logo.png"></h1>
-            </div>
-
             <div class="texto">
-                <textarea class="textoEncriptar" name="mensaje" id="mensaje" placeholder="Ingrese el texto aqui"></textarea>
-                <section class="botones">
+                <div class="logo">
+                    <h1><img src="imagenes/Logo.png"></h1>
+                </div>
+                
+                <div class="cuadroTexto">
+                    <textarea class="textoEncriptar" name="mensaje" id="mensaje" placeholder="Ingrese el texto aqui"></textarea>
+                    <div class="instruccion">
+                        <h4><img src="imagenes/exclamation-circle.png"></h4>
+                        <h4>Solo letras minúsculas y sin acentos</h4>
+                    </div>
+                </div>
+
+                <div class="botones">
                     <input type="submit" name="botonEncriptar" value="Encriptar" class="botonEncriptar">
                     <input type="submit" name="botonDesencriptar" value="Desencriptar" class="botonDesencriptar">
-                </section>
+                </div>
             </div>
 
             <div class="textoEncriptado">
@@ -38,6 +45,22 @@
                 </div>
             </div>
         </section>
+
+        <footer>
+            <h2>Desarrollado por Andrew Dulanto</h2>
+            <h2>
+                <a href="https://instagram.com/andrew.idb?igshid=MmIzYWVlNDQ5Yg==" target="_blank">
+                <img src="imagenes/instagram.png"></a>
+            </h2>
+            <h2>
+                <a href="https://www.linkedin.com/in/andrew-idb/" target="_blank"></a>
+                <img src="imagenes/linkedin.png">
+            </h2>
+            <h2>
+                <a href="https://github.com/animduba" target="_blank"></a>
+                <img src="imagenes/github.png">
+            </h2>
+        </footer>
             
     </body>
 
