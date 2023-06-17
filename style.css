@@ -16,19 +16,19 @@
     display: flex;
     align-items: center;
 
-    outline: red dashed 1px;   
+    /*outline: red dashed 1px;*/   
 }
 
 .logo img {
-    height: 60%;
-    width: auto;
+    width: 60%;
     float: left;
 }
 
 .cuadroTexto {
     height: 83%;
-    width: 100%;  
-    outline: red dashed 1px;  
+    width: 100%;
+
+    /*outline: red dashed 1px;*/  
 }
 
 .texto {
@@ -38,12 +38,12 @@
 
     text-align: center;
 
-    outline: red dashed 1px;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    /*outline: red dashed 1px;*/
 }
 
 
@@ -51,6 +51,7 @@
     background: #E5E5E5;
     border: none;
     resize: none;
+    outline: none;
     
     color: #0A3871;
     font-size: 150%;
@@ -59,7 +60,7 @@
 
     margin: 1% 0 0 0; /*top right bottom left */
 
-    outline: red dashed 1px;
+    /*outline: red dashed 1px;*/
 }
 
 textarea::placeholder {
@@ -75,7 +76,7 @@ textarea::placeholder {
 
     margin: 1% 0 0 0; /*top right bottom left */
 
-    outline: red dashed 1px;
+    /*outline: red dashed 1px;*/
 }
 
 .instruccion h4 {
@@ -135,11 +136,12 @@ h4 img{
     height: 100%;
     width: 50%;
     text-align: center;
-    outline: red dashed 1px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    /*outline: red dashed 1px;*/
 }
 
 .caja {
@@ -150,14 +152,29 @@ h4 img{
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
 
-    text-align: center;
-
-    outline: red dashed 1px;
+    color: black;
+    text-align: left;
+    font-size: 105%;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    /*outline: red dashed 1px;*/
+
+}
+
+.textoMostrado {
+    height: 92%;
+    width: 88%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /*outline: red dashed 1px;*/
 }
 
 .munheco {
@@ -167,19 +184,15 @@ h4 img{
 
     height: 45%;
     width: 90%;
-
-    outline: red dashed 1px;
 }
 
 .munheco img {
-    width: 85%;
-    height: auto;
-
-    outline: red dashed 1px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
-
 .caja h2 {
+    text-align: center;
     color: #343A40;
     font-weight: bold;
     font-size: 130%;
@@ -187,6 +200,7 @@ h4 img{
 }
 
 .caja h3 {
+    text-align: center;
     color: #495057;
     font-size: 75%;
     margin: 3% 10% 0 10%; /*top right bottom left */
@@ -225,15 +239,6 @@ footer img:hover {
         height: 55%;
         width: 100%;
         
-    }
-
-    .logo {
-        height: 10%;
-    }
-
-    .logo img {
-        width: 60%;
-        height: auto;
     }
 
     .cuadroTexto {
@@ -280,13 +285,11 @@ footer img:hover {
         width: 80%;
     }
 
-    .munheco img {
-        height: 95%;
-        width: auto;
+    .caja h2 {
+        font-size: 115%;
     }
 
     .caja h3 {
-        color: #495057;
         font-size: 75%;
         margin: 1% 10% 0 10%; /*top right bottom left */
     }
@@ -296,7 +299,6 @@ footer img:hover {
 @media screen and (max-width: 400px) {
     .logo img {
         width: 45%;
-        height: auto;
     }
 
     .botones {
@@ -311,6 +313,15 @@ footer img:hover {
     .botonDesencriptar {
         height: 90%;
         width: 45%;
+    }
+
+    .caja h2 {
+        font-size: 90%;
+    }
+
+    .caja h3 {
+        font-size: 60%;
+        margin: 1% 10% 0 10%; /*top right bottom left */
     }
 
     footer h2 {
