@@ -25,7 +25,7 @@
                 </div>
                 
                 <div class="cuadroTexto">
-                    <textarea class="textoEncriptar" name="mensaje" id="mensaje" placeholder="Ingrese el texto aqui"></textarea>
+                    <textarea class="textoEncriptar" name="textoEncriptar" id="textoEncriptar" placeholder="Ingrese el texto aqui"></textarea>
                     <div class="instruccion">
                         <h4><img src="imagenes/exclamation-circle.png"></h4>
                         <h4>Solo letras minúsculas y sin acentos</h4>
@@ -40,9 +40,11 @@
 
             <div class="textoEncriptado">
                 <div class="caja">
-                    <h1 class="munheco"><img src="imagenes/munheco.png"></h1>
-                    <h2>Ningún mensaje fue encontrado</h2>
-                    <h3>Ingresa el texto que desees encriptar o desencriptar.</h3>
+                    <div class="textoMostrado" id="textoMostrado">
+                        <h1 class="munheco" id="desaparecerImg"><img src="imagenes/munheco.png"></h1>
+                        <h2 id="desaparecerT1">Ningún mensaje fue encontrado</h2>
+                        <h3 id="desaparecerT2">Ingresa el texto que desees encriptar o desencriptar.</h3>
+                    </div>
                 </div>
             </div>
         </section>
