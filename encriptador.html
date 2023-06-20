@@ -38,13 +38,18 @@
                 </div>
             </div>
 
-            <div class="textoEncriptado">
+            <div class="textoMostrado">
                 <div class="caja">
-                    <div class="textoMostrado" id="textoMostrado">
-                        <h1 class="munheco" id="desaparecerImg"><img src="imagenes/munheco.png"></h1>
-                        <h2 id="desaparecerT1">Ningún mensaje fue encontrado</h2>
-                        <h3 id="desaparecerT2">Ingresa el texto que desees encriptar o desencriptar.</h3>
+                    <div id="desaparecer" class="desaparecer">
+                        <h1 class="munheco"><img src="imagenes/munheco.png"></h1>
+                        <h2>Ningún mensaje fue encontrado</h2>
+                        <h3>Ingresa el texto que desees encriptar o desencriptar.</h3>
                     </div>
+
+                    <div class="aparecer" id="aparecer">
+                        <p class="textoEncriptado" id="textoEncriptado"></p>
+                        <input type="submit" id="botonCopiar" name="botonCopiar" value="Copiar" class="botonCopiar">
+                    </div>                   
                 </div>
             </div>
         </section>
@@ -64,9 +69,14 @@
                 <img src="imagenes/github.png"></a>
             </h2>
         </footer>
-        
-    </body>
 
-    <script src="script.js"></script>
-    
+        <div id="error" class="error">
+            <div class="cajaError">
+                <div>ERROR</div>
+                <div id="mensajeError" class="mensajeError">h</div>
+                <input type="submit" id="botonError" name="botonError" value="Entendido" class="botonError">
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
