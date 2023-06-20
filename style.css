@@ -1,3 +1,9 @@
+body {
+height: 100vh;
+width: 100vw;
+
+}
+
 .pantalla {
     background: #E5E5E5;
     display: flex;
@@ -54,7 +60,7 @@
     outline: none;
     
     color: #0A3871;
-    font-size: 150%;
+    font-size: 135%;
     height: 90%;
     width: 85%;
 
@@ -132,7 +138,7 @@ h4 img{
     box-shadow: 0px 0px 30px -9px #0A3871;
 }
 
-.textoEncriptado {
+.textoMostrado {
     height: 100%;
     width: 50%;
     text-align: center;
@@ -165,7 +171,7 @@ h4 img{
 
 }
 
-.textoMostrado {
+.desaparecer {
     height: 92%;
     width: 88%;
 
@@ -175,6 +181,7 @@ h4 img{
     flex-direction: column;
 
     /*outline: red dashed 1px;*/
+    
 }
 
 .munheco {
@@ -184,11 +191,15 @@ h4 img{
 
     height: 45%;
     width: 90%;
+
+    /*outline: red dashed 1px;*/
 }
 
 .munheco img {
     max-height: 100%;
     max-width: 100%;
+
+    /*outline: red dashed 1px;*/
 }
 
 .caja h2 {
@@ -197,6 +208,8 @@ h4 img{
     font-weight: bold;
     font-size: 130%;
     margin: 5px 10% 0 10%; /*top right bottom left */
+
+    /*outline: red dashed 1px;*/
 }
 
 .caja h3 {
@@ -204,6 +217,49 @@ h4 img{
     color: #495057;
     font-size: 75%;
     margin: 3% 10% 0 10%; /*top right bottom left */
+
+    /*outline: red dashed 1px;*/
+}
+
+.aparecer {
+    height: 92%;
+    width: 88%;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /*outline: red dashed 1px;*/
+}
+
+.textoEncriptado {
+    height: 90%;
+    width: 100%;
+
+    overflow-y: auto;
+    word-break: break-all;
+    color: #495057;
+}
+
+.botonCopiar {
+    height: 7.5%;
+    width: 80%;
+
+    margin: 1% 1% 5% 1%; /*top right bottom left */
+    
+    background: white;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    font-size: 85%;
+    color: #0A3871;
+    cursor: pointer;
+}
+
+.botonCopiar:hover, .botonDesencriptar:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px -9px #0A3871;
 }
 
 footer {
@@ -224,6 +280,81 @@ footer h2 {
 
 footer img:hover {
     transform: scale(1.1);
+}
+
+.error {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0,.2);
+
+    display: none;
+}
+
+.cajaError {  
+    height: 15%;
+    width: 20%;
+
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 2%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*outline: red dashed 1px;*/
+}
+
+.cajaError :first-child {
+    width: 90%;
+    height: auto;
+
+    font-size: 120%;
+    font-weight: bold;
+    color: #0A3871;
+}
+
+.mensajeError {
+    width: 90%;
+    height: 100%;
+    
+    font-size: 85%;
+    color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    /*outline: red dashed 1px;*/
+}
+
+.botonError {
+    width: 65%;
+    height: 65%;
+
+    border: 1px solid #343A40;
+    border-radius: 24px;
+}
+
+.botonError:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px -9px #0A3871;
 }
 
 /* Media query para ajustar el tamaño del cuadro en diferentes tamaños de pantalla */
@@ -269,7 +400,7 @@ footer img:hover {
         margin: 0 0 0 0.5%; /*top right bottom left */
     }
 
-    .textoEncriptado {
+    .textoMostrado {
         height: 45%;
         width: 100%;
     }
@@ -292,6 +423,18 @@ footer img:hover {
     .caja h3 {
         font-size: 75%;
         margin: 1% 10% 0 10%; /*top right bottom left */
+    }
+
+    .botonCopiar {
+        height: 12%;
+        width: 40%;
+
+        margin: 1% 1% 1% 1%;
+    }
+
+    .cajaError {  
+        height: 15%;
+        width: 40%;
     }
 }
 
@@ -326,6 +469,12 @@ footer img:hover {
 
     footer h2 {
         font-size: 75%;
+    }
+
+    .cajaError {  
+        height: 15%;
+        width: 60%;
+        padding: 5%;
     }
 
 }
