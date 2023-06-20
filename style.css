@@ -146,6 +146,7 @@ h4 img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 
     /*outline: red dashed 1px;*/
 }
@@ -175,6 +176,7 @@ h4 img{
     height: 92%;
     width: 88%;
 
+    /*display: flex;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -260,6 +262,27 @@ h4 img{
 .botonCopiar:hover, .botonDesencriptar:hover{
     transform: scale(1.05);
     box-shadow: 0px 0px 30px -9px #0A3871;
+}
+
+.copiado {
+    height: 90%;
+    width: 80%;
+    border-radius: 32px;
+
+    color: #65747D;
+
+    background-color: rgba(0,0,0,.2);
+
+    /*display: none;*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: absolute;
+    z-index: 2;
+
+    /*outline: red dashed 1px;*/
 }
 
 footer {
@@ -430,6 +453,10 @@ footer img:hover {
         width: 40%;
 
         margin: 1% 1% 1% 1%;
+    }
+
+    .copiado {
+        border-radius: 20px;
     }
 
     .cajaError {  

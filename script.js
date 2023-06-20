@@ -4,14 +4,6 @@ var botonDesencriptar = document.getElementById('botonDesencriptar');
 var botonCopiar = document.getElementById('botonCopiar');
 var botonError = document.getElementById('botonError');
 
-function desaparecer() {
-    document.getElementById("desaparecer").style.display = "none";
-}
-
-function aparecer() {
-    document.getElementById("aparecer").style.display = "flex";
-}
-
 function encriptar(texto) {
     var nuevoTexto = texto  
         .replace(/e/g, 'enter')
@@ -45,11 +37,42 @@ function btnError() {
     Error.style.display = "none";
 }
 
-function msjCopiado(mensaje) {
+function msjCopiado() {
+    var copiado = document.getElementById("copiado");
+    var aparecer = document.getElementById("aparecer");
+    var opacidadCopiado = 1;
+    var opacidadAparecer = 0.5;
+    var paso = 0.1;
+    var intervalo = 160; // Intervalo de tiempo en milisegundos
 
-    setTimeout(function() {
-        Error.style.display = "none";
-      }, 2000); // 1000 milisegundos = 1 segundo
+    copiado.style.display = "flex";
+    
+    var temporizador = setInterval(function() {
+        
+        if (opacidadCopiado <= 0.5) {
+            clearInterval(temporizador);
+            copiado.style.display = "none";
+            aparecer.style.opacity = 1;
+            aparecer.style.opacity = "alpha(opacity=100)";
+        }
+        
+        copiado.style.opacity = opacidadCopiado;
+        copiado.style.filter = "alpha(opacity=" + (opacidadCopiado * 100) + ")";
+        opacidadCopiado = opacidadCopiado - paso;
+
+        if (opacidadAparecer >= 1) {
+            opacidadAparecer = 1;
+          } else {
+            opacidadAparecer = opacidadAparecer + paso;
+        }
+
+        aparecer.style.opacity = opacidadAparecer;
+        aparecer.style.filter = "alpha(opacity=" + (opacidadAparecer * 100) + ")";
+
+    }, intervalo);
+
+
+
 }
 
 function btncopiar() {
@@ -60,10 +83,10 @@ function btncopiar() {
 
     //Si seresuelve correctamente, se ejecuta la función then sino la funcion catch
     .then(function() {
-      alert("Texto copiado al portapapeles");
+      msjCopiado("Texto copiado al portapapeles");
     })
     .catch(function(error) {
-      console.error("Error al copiar el texto: ", error);
+      msjError("No se pudo copiar el texto: ", error);
     });
 
 }
@@ -99,8 +122,9 @@ function btnEncriptar() {
         return;
     };
 
-    desaparecer();
-    aparecer();
+    document.getElementById("desaparecer").style.display = "none";
+    document.getElementById("aparecer").style.display = "flex";
+
     textoEncriptado = encriptar(textoIngresado);
     textoMostrado.textContent = textoEncriptado;
     
@@ -116,8 +140,9 @@ function btnDesencriptar() {
         return;
     };
 
-    desaparecer();
-    aparecer();
+    document.getElementById("desaparecer").style.display = "none";
+    document.getElementById("aparecer").style.display = "flex";
+    
     textoEncriptado = desencriptar(textoIngresado);
     textoMostrado.textContent = textoEncriptado;
 
